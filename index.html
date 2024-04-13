@@ -11,31 +11,49 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="styles/index.css" rel="stylesheet" />
+
+    <script defer src="scripts/index.js"></script>
 
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
-    <header>
-      <div>
-        <img src="assets/images/logo.svg" alt="W Logo" />
+    <header class="primary-header flex container">
+      <div class="logo-wrapper">
+        <a href="#">
+          <img src="assets/images/logo.svg" alt="W Logo" class="logo" />
+        </a>
       </div>
-      <nav>
-        <button aria-label="Open main menu"></button>
-        <ul>
+      <nav class="primary-nav">
+        <button
+          aria-label="Open main menu"
+          class="js-nav-toggle nav-toggle relative"
+          aria-controls="primary-nav__list"
+          aria-haspopup="menu"
+          aria-expanded="false"
+        ></button>
+        <ul class="js-nav-menu primary-nav__link-list flex" id="primary-nav__list" aria-hidden="true">
           <li>
-            <a href="#"> Home </a>
+            <a href="#" class="primary-nav__link"> Home </a>
           </li>
           <li>
-            <a href="#"> New </a>
+            <a href="#" class="primary-nav__link"> New </a>
           </li>
           <li>
-            <a href="#"> Popular </a>
+            <a href="#" class="primary-nav__link"> Popular </a>
           </li>
           <li>
-            <a href="#"> Trending </a>
+            <a href="#" class="primary-nav__link"> Trending </a>
           </li>
           <li>
-            <a href="#"> Categories </a>
+            <a href="#" class="primary-nav__link"> Categories </a>
           </li>
         </ul>
       </nav>
@@ -43,7 +61,7 @@
 
     <main>
       <div>
-        <div>
+        <div class="main-news">
           <h1>The Bright Future of Web 3.0?</h1>
           <p>
             We dive into the next evolution of the web that claims to put the
@@ -51,15 +69,15 @@
             really fulfilling its promise?
           </p>
 
-          <a href="#"> Read more </a>
+          <a href="#" class="bg-red read-more-link"> Read more </a>
         </div>
 
-        <section aria-labelledby="new-heading">
+        <section aria-labelledby="new-heading" class="side-news">
           <h2 id="new-heading">New</h2>
 
           <ul>
             <li>
-              <article>
+              <article class="side-news__news-article">
                 <h3>
                   <a href="#"> Hydrogen VS Electric Cars </a>
                 </h3>
@@ -67,7 +85,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="side-news__news-article">
                 <h3>
                   <a href="#"> The Downsides of AI Artistry </a>
                 </h3>
@@ -78,7 +96,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="side-news__news-article">
                 <h3>
                   <a href="#"> Is VC Funding Drying Up? </a>
                 </h3>
@@ -93,10 +111,10 @@
       </div>
 
       <section aria-label="More news">
-        <ol>
+        <ol class="ordered-news">
           <li>
             01
-            <article>
+            <article class="ordered-news__news-article">
               <h3>
                 <a href="#"> Reviving Retro PCs </a>
               </h3>
@@ -105,7 +123,7 @@
           </li>
           <li>
             02
-            <article>
+            <article class="ordered-news__news-article">
               <h3>
                 <a href="#"> Top 10 Laptops of 2022 </a>
               </h3>
@@ -114,7 +132,7 @@
           </li>
           <li>
             03
-            <article>
+            <article class="ordered-news__news-article">
               <h3>
                 <a href="#"> The Growth of Gaming </a>
               </h3>
