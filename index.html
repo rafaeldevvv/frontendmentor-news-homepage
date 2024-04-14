@@ -39,7 +39,11 @@
           aria-haspopup="menu"
           aria-expanded="false"
         ></button>
-        <ul class="js-nav-menu primary-nav__link-list flex" id="primary-nav__list" aria-hidden="true">
+        <ul
+          class="js-nav-menu primary-nav__link-list flex"
+          id="primary-nav__list"
+          aria-hidden="true"
+        >
           <li>
             <a href="#" class="primary-nav__link"> Home </a>
           </li>
@@ -60,47 +64,92 @@
     </header>
 
     <main>
-      <div>
-        <div class="main-news">
-          <h1>The Bright Future of Web 3.0?</h1>
-          <p>
-            We dive into the next evolution of the web that claims to put the
-            power of the platforms back into the hands of the people. But is it
-            really fulfilling its promise?
-          </p>
+      <div class="container top-section-container grid">
+        <div class="main-news grid">
+          <div class="main-news__img">
+            <picture>
+              <source
+                media="(min-width:40em)"
+                srcset="assets/images/image-web-3-desktop.jpg"
+              />
+              <img
+                src="assets/images/image-web-3-mobile.jpg"
+                alt="Abstract illustration featuring various colored geometric shapes"
+              />
+            </picture>
+          </div>
 
-          <a href="#" class="bg-red read-more-link"> Read more </a>
+          <h1 class="fs-900 fw-boldest main-news__title">
+            The Bright Future of Web 3.0?
+          </h1>
+
+          <div class="main-news__content flow" style="--flow-space: 1.5rem">
+            <p class="text-dark-grayish">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+
+            <a
+              href="#"
+              class="bg-red read-more-btn no-underline text-white inline-block fs-300"
+            >
+              Read more
+            </a>
+          </div>
         </div>
 
-        <section aria-labelledby="new-heading" class="side-news">
-          <h2 id="new-heading">New</h2>
+        <section aria-labelledby="new-heading" class="side-news bg-dark-blue">
+          <h2
+            id="new-heading"
+            class="fs-800 text-soft-orange side-news__heading"
+          >
+            New
+          </h2>
 
-          <ul>
+          <ul class="side-news__list">
             <li>
-              <article class="side-news__news-article">
-                <h3>
-                  <a href="#"> Hydrogen VS Electric Cars </a>
+              <article class="side-news__article">
+                <h3 class="fs-600">
+                  <a
+                    href="#"
+                    class="no-underline text-white hover:text-soft-orange"
+                  >
+                    Hydrogen VS Electric Cars
+                  </a>
                 </h3>
-                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                <p class="text-grayish-blue">
+                  Will hydrogen-fueled cars ever catch up to EVs?
+                </p>
               </article>
             </li>
             <li>
-              <article class="side-news__news-article">
-                <h3>
-                  <a href="#"> The Downsides of AI Artistry </a>
+              <article class="side-news__article">
+                <h3 class="fs-600">
+                  <a
+                    href="#"
+                    class="no-underline text-white hover:text-soft-orange"
+                  >
+                    The Downsides of AI Artistry
+                  </a>
                 </h3>
-                <p>
+                <p class="text-grayish-blue">
                   What are the possible adverse effects of on-demand AI image
                   generation?
                 </p>
               </article>
             </li>
             <li>
-              <article class="side-news__news-article">
-                <h3>
-                  <a href="#"> Is VC Funding Drying Up? </a>
+              <article class="side-news__article">
+                <h3 class="fs-600">
+                  <a
+                    href="#"
+                    class="no-underline text-white hover:text-soft-orange"
+                  >
+                    Is VC Funding Drying Up?
+                  </a>
                 </h3>
-                <p>
+                <p class="text-grayish-blue">
                   Private funding by VC firms is down 50% YOY. We take a look at
                   what that means.
                 </p>
@@ -110,46 +159,103 @@
         </section>
       </div>
 
-      <section aria-label="More news">
-        <ol class="ordered-news">
-          <li>
-            01
-            <article class="ordered-news__news-article">
-              <h3>
-                <a href="#"> Reviving Retro PCs </a>
-              </h3>
-              <p>What happens when old PCs are given modern upgrades?</p>
-            </article>
-          </li>
-          <li>
-            02
-            <article class="ordered-news__news-article">
-              <h3>
-                <a href="#"> Top 10 Laptops of 2022 </a>
-              </h3>
-              <p>Our best picks for various needs and budgets.</p>
-            </article>
-          </li>
-          <li>
-            03
-            <article class="ordered-news__news-article">
-              <h3>
-                <a href="#"> The Growth of Gaming </a>
-              </h3>
-              <p>How the pandemic has sparked fresh opportunities.</p>
-            </article>
-          </li>
-        </ol>
+      <section aria-label="Featured articles" class="featured-section">
+        <div class="container">
+          <ol class="featured-news grid">
+            <li>
+              <article class="featured-news__article grid">
+                <div>
+                  <img
+                    class=""
+                    src="assets/images/image-retro-pcs.jpg"
+                    src="Old PCs"
+                  />
+                </div>
+                <div class="">
+                  <span class="fs-700 text-grayish-blue fw-bolder"> 01 </span>
+                  <h3>
+                    <a
+                      href="#"
+                      class="no-underline text-black hover:text-soft-red"
+                    >
+                      Reviving Retro PCs
+                    </a>
+                  </h3>
+                  <p class="text-dark-grayish">
+                    What happens when old PCs are given modern upgrades?
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="featured-news__article grid">
+                <div>
+                  <img
+                    class=""
+                    src="assets/images/image-top-laptops.jpg"
+                    src="keyboard keys"
+                  />
+                </div>
+                <div>
+                  <span class="fs-700 text-grayish-blue fw-bolder"> 02 </span>
+                  <h3>
+                    <a
+                      href="#"
+                      class="no-underline text-black hover:text-soft-red"
+                    >
+                      Top 10 Laptops of 2022
+                    </a>
+                  </h3>
+                  <p class="text-dark-grayish">
+                    Our best picks for various needs and budgets.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="featured-news__article grid">
+                <div>
+                  <img
+                    class=""
+                    src="assets/images/image-gaming-growth.jpg"
+                    src="white controller, turned 90 degrees to the left, floating"
+                  />
+                </div>
+                <div>
+                  <span class="fs-700 text-grayish-blue fw-bolder"> 03 </span>
+                  <h3>
+                    <a
+                      href="#"
+                      class="no-underline text-black hover:text-soft-red"
+                    >
+                      The Growth of Gaming
+                    </a>
+                  </h3>
+                  <p class="text-dark-grayish">
+                    How the pandemic has sparked fresh opportunities.
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
       </section>
     </main>
 
     <footer class="attribution">
       <p>
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          class="fw-bold text-very-dark-blue hover:text-soft-red"
           >Frontend Mentor</a
         >. Coded by
-        <a href="https://rafaeldevvv.github.io/portfolio">rafaeldevvv</a>.
+        <a
+          href="https://rafaeldevvv.github.io/portfolio"
+          class="fw-bold text-very-dark-blue hover:text-soft-red"
+          >rafaeldevvv</a
+        >.
       </p>
     </footer>
   </body>
