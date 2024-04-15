@@ -75,6 +75,14 @@ p {
    position: absolute;
 }
 
+.vis-visible {
+   visibility: visible;
+}
+
+.vis-hidden {
+   visibility: hidden;
+}
+
 .block {
    display: block;
 }
@@ -83,7 +91,8 @@ p {
    display: inline-block;
 }
 
-.hover\:text-soft-red:hover, .hover\:text-soft-red:focus-visible {
+.hover\:text-soft-red:hover,
+.hover\:text-soft-red:focus-visible {
    color: hsl(var(--c-soft-red));
 }
 
@@ -99,7 +108,8 @@ p {
    color: hsl(var(--c-soft-orange));
 }
 
-.hover\:text-soft-orange:hover, .hover\:text-soft-orange:focus-visible {
+.hover\:text-soft-orange:hover,
+.hover\:text-soft-orange:focus-visible {
    color: hsl(var(--c-soft-orange));
 }
 
@@ -198,9 +208,6 @@ p {
    display: none;
 }
 
-.primary-nav__link-list {
-   gap: clamp(.3rem, 2.8vw, 2rem);
-}
 
 .primary-nav__link {
    color: hsl(var(--c-dark-grayish));
@@ -217,13 +224,28 @@ p {
 
 @media (max-width: 30em) {
    .primary-nav__link-list {
+      --trans-duration: 500ms;
       flex-direction: column;
+      row-gap: 1.3rem;
+
       position: fixed;
-      inset: 0 0 0 30vw;
-      transition: inset 0.5s ease;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 100vw;
+      opacity: 0;
+
+      transition: 
+         left var(--trans-duration) ease,
+         opacity var(--trans-duration) ease;
+
       padding: 8rem 0 0 2rem;
-      gap: 1.3rem;
       background-color: white;
+   }
+
+   .primary-nav__link-list[aria-hidden="false"] {
+      left: 30vw;
+      opacity: 1;
    }
 
    .primary-nav__link-list::after {
@@ -231,7 +253,7 @@ p {
       position: fixed;
       opacity: 0;
       inset: 0;
-      transition: opacity 500ms ease, inset 500ms ease;
+      transition: opacity var(--trans-duration) ease, inset var(--trans-duration) ease;
       pointer-events: none;
       background-color: hsl(0 0% 0% / .4);
    }
@@ -240,10 +262,6 @@ p {
       pointer-events: all;
       opacity: 1;
       inset: 0 70vw 0 0;
-   }
-
-   .primary-nav__link-list[aria-hidden="true"] {
-      left: 100vw;
    }
 
    .primary-nav__link {
@@ -258,7 +276,7 @@ p {
       line-height: 0;
       z-index: 999;
    }
-
+   
    .nav-toggle:focus-visible {
       outline: 2px solid black;
       outline-offset: .2rem;
@@ -266,9 +284,22 @@ p {
 
    .nav-toggle[aria-expanded="true"] {
       background-image: url("../assets/images/icon-menu-close.svg");
-      top: 1.01rem;
-      right: 1.875rem;
+      top: 1.875rem;
+      right: 1.31rem;
       position: fixed;
+   }
+
+   .nav-toggle[aria-expanded="true"] + .nav-toggle-placeholder {
+      height: 2.5rem;
+   }
+}
+
+@media (min-width: 30.01em) {
+   .primary-nav__link-list {
+      column-gap: clamp(.3rem, 2.8vw, 2rem);
+      /* need `visibility: visible;` to override `vis-hidden` utility 
+      in desktop when resizing with menu closed */
+      visibility: visible;
    }
 }
 
@@ -322,7 +353,7 @@ p {
       margin-top: 2rem;
       column-gap: 2rem;
    }
-   
+
    .main-news {
       column-gap: clamp(2rem, 5vw, 7rem);
       grid-template-columns: 3fr 4fr;

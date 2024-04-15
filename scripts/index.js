@@ -6,4 +6,14 @@ navToggle.addEventListener("click", () => {
 
    navToggle.setAttribute("aria-expanded", !expanded);
    navMenu.setAttribute("aria-hidden", expanded);
-})
+});
+
+navMenu.addEventListener("transitionend", (e) => {
+   const expanded = navMenu.getAttribute("aria-hidden") === 'false';
+   if (!expanded) navMenu.classList.add('vis-hidden');
+});
+
+navMenu.addEventListener("transitionstart", () => {
+   const expanded = navMenu.getAttribute("aria-hidden") === 'false';
+   if (expanded) navMenu.classList.remove('vis-hidden');
+});
