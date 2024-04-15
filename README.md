@@ -46,7 +46,7 @@ Users should be able to:
 
 - [using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - [@starting-style](https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style#browser_compatibility)
-- [](https://validator.w3.org/nu/#textarea)
+- [HTML Validator](https://validator.w3.org/nu/#textarea)
 
 ## Author
 
