@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![News Homepage](./assets/images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/rafaeldevvv/frontendmentor-news-homepage](https://github.com/rafaeldevvv/frontendmentor-news-homepage)
+- Live Site URL: [https://rafaeldevvv.github.io/frontendmentor-news-homepage/](https://rafaeldevvv.github.io/frontendmentor-news-homepage/)
 
 ## My process
 
@@ -44,6 +44,9 @@ Users should be able to:
 
 ### Useful resources
 
+- [using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [@starting-style](https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style#browser_compatibility)
+- [](https://validator.w3.org/nu/#textarea)
 
 ## Author
 
